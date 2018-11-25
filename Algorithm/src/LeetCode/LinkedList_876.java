@@ -27,12 +27,24 @@ import java.util.Map;
 public class LinkedList_876 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		long start = System.currentTimeMillis(); 
-		System.out.println("start");		
+		Solution1 solution1 = new Solution1();
+        Solution1.ListNode listNode1 = new Solution1.ListNode(1);
+        Solution1.ListNode listNode2 = new Solution1.ListNode(2);
+        Solution1.ListNode listNode3 = new Solution1.ListNode(3);
+        Solution1.ListNode listNode4 = new Solution1.ListNode(4);
+        Solution1.ListNode listNode5 = new Solution1.ListNode(5);
+        listNode1.next = listNode2;
+        listNode2.next = listNode3;
+        listNode3.next = listNode4;
+        listNode4.next = listNode5;
 
-		long end = System.currentTimeMillis(); //프로그램이 끝나는 시점 계산
-		System.out.println( "실행 시간 : " + ( end - start ));
+        Solution1.ListNode result = solution1.middleNode(listNode1);
+
+        while(result != null) {
+            System.out.println(result.val);
+            result = result.next;
+        }
+
 	}
 
 }
@@ -46,12 +58,19 @@ public class LinkedList_876 {
  */
 
 class Solution1 {
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {val = x;}
+    public static class ListNode {
+         int val;
+         ListNode next;
+         ListNode(int x) { val = x; }
     }
     public ListNode middleNode(ListNode head) {
-        return head;
+        ListNode[] A = new ListNode[100];
+        int t = 0;
+        while (head.next != null) {
+            A[t++] = head;
+            head = head.next;
+        }
+        return A[t / 2];
     }
+
 }

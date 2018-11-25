@@ -27,10 +27,10 @@ answers	return
 수포자 1은 모든 문제를 맞혔습니다.
 수포자 2는 모든 문제를 틀렸습니다.
 수포자 3은 모든 문제를 틀렸습니다.
-따라서 가장 문제를 많이 맞힌 사람은 수포자 1입니다.
+따라서 가장 문제를 많이 맞힌 사람은 수포자1입니다.
 
 입출력 예 #2
-
+∂
 수포자 1은 [1, 4]번 문제를 맞혔습니다.
 수포자 2는 다섯 번째 문제를 맞혔습니다.
  */
@@ -51,7 +51,6 @@ public class Search_1 {
 
 class Solution_Search {
     public int[] solution(int[] answers) {
-
         int[] personA = new int[answers.length]; // 1,2,3,4,5를 반복
 
         for(int i=1; i<answers.length+1; i++) {
