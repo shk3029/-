@@ -12,6 +12,10 @@ There are N network nodes, labelled 1 to N.
 Given times, a list of travel times as directed edges times[i] = (u, v, w), where u is the source node, v is the target node, and w is the time it takes for a signal to travel from source to target.
 Now, we send a signal from a certain node K. How long will it take for all nodes to receive the signal? If it is impossible, return -1.
 
+1에서 N까지 레이블이 지정된 N 개의 네트워크 노드가 있습니다.
+주어진 시간, 방향 edge [i] = (u, v, w)로 이동 시간 목록, 여기서 u는 소스 노드, v는 대상 노드, w는 신호가 이동하는 데 걸리는 시간 타겟팅 할 소스.
+이제 우리는 특정 노드 K로부터 신호를 보냅니다. 모든 노드가 신호를 수신하는 데 시간이 얼마나 걸립니까? 불가능할 경우 -1을 반환합니다.
+
 Note:
 N will be in the range [1, 100].
 K will be in the range [1, N].
