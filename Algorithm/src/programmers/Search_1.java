@@ -40,9 +40,9 @@ public class Search_1 {
         // TODO Auto-generated method stub
         System.out.println("start");
         Solution_Search solution = new Solution_Search();
-        int[] answers = {1,2,3,4,5,1,2,3,4,5,2,1,2,1,2,3,2,1,2,5,7};
+        int[] answers = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 2, 1, 2, 1, 2, 3, 2, 1, 2, 5, 7};
         int res[] = solution.solution(answers);
-        for(int i : res) {
+        for (int i : res) {
             System.out.println("end : " + i + "입니다");
         }
     }
@@ -53,45 +53,44 @@ class Solution_Search {
     public int[] solution(int[] answers) {
         int[] personA = new int[answers.length]; // 1,2,3,4,5를 반복
 
-        for(int i=1; i<answers.length+1; i++) {
+        for (int i = 1; i < answers.length + 1; i++) {
             int a = i % 5 == 0 ? 5 : i % 5;
-            personA[i-1] = a;
+            personA[i - 1] = a;
         }
 
         int[] personB = new int[answers.length]; // 2,1,2,3,2,4,2,5를 반복
         int b = 1;
-        for(int i=1; i<answers.length+1; i++) {
-            if(i%2 == 1) {
-                personB[i-1] = 2;
+        for (int i = 1; i < answers.length + 1; i++) {
+            if (i % 2 == 1) {
+                personB[i - 1] = 2;
             } else {
                 b = (b % 5 == 0) ? 5 : (b % 5 == 2) ? b % 5 + 1 : b % 5;
-                personB[i-1] = b;
+                personB[i - 1] = b;
                 b++;
             }
         }
 
         int[] personC = new int[answers.length]; // 3,1,2,4,5를 2번씩 반복
-        int[] c = {3,3,1,1,2,2,4,4,5,5};
-        for(int i=0; i<answers.length; i++) {
-            personC[i] = (i >= c.length) ? c[i%c.length] : c[i];
+        int[] c = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
+        for (int i = 0; i < answers.length; i++) {
+            personC[i] = (i >= c.length) ? c[i % c.length] : c[i];
         }
 
         int countA = 0;
         int countB = 0;
         int countC = 0;
 
-        for(int i=0; i<answers.length; i++) {
-            if(personA[i] == answers[i]) {
-                countA ++;
+        for (int i = 0; i < answers.length; i++) {
+            if (personA[i] == answers[i]) {
+                countA++;
             }
-            if(personB[i] == answers[i]) {
-                countB ++;
+            if (personB[i] == answers[i]) {
+                countB++;
             }
-            if(personC[i] == answers[i]) {
-                countC ++;
+            if (personC[i] == answers[i]) {
+                countC++;
             }
         }
-
 
 
         return answers;

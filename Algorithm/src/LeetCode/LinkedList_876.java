@@ -26,8 +26,8 @@ import java.util.Map;
  */
 public class LinkedList_876 {
 
-	public static void main(String[] args) {
-		Solution1 solution1 = new Solution1();
+    public static void main(String[] args) {
+        Solution1 solution1 = new Solution1();
         Solution1.ListNode listNode1 = new Solution1.ListNode(1);
         Solution1.ListNode listNode2 = new Solution1.ListNode(2);
         Solution1.ListNode listNode3 = new Solution1.ListNode(3);
@@ -40,29 +40,34 @@ public class LinkedList_876 {
 
         Solution1.ListNode result = solution1.middleNode(listNode1);
 
-        while(result != null) {
+        while (result != null) {
             System.out.println(result.val);
             result = result.next;
         }
 
-	}
+    }
 
 }
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 
 class Solution1 {
     public static class ListNode {
-         int val;
-         ListNode next;
-         ListNode(int x) { val = x; }
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
     }
+
     public ListNode middleNode(ListNode head) {
         ListNode[] A = new ListNode[100];
         int t = 0;

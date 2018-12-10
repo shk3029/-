@@ -1,4 +1,5 @@
 package programmers;
+
 /*
  *  프로그래머스 탐욕법 1번 - 체육복
  *  문제 설명
@@ -26,16 +27,16 @@ package programmers;
 		3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
  */
 public class Greedy_1 {
-	public static void main(String[] args) {
-		System.out.println("start");
+    public static void main(String[] args) {
+        System.out.println("start");
         Solution sol = new Solution();
         int result = 0;
         int n = 5;
-        int[] lost = {2,4};
-        int[] reserve = {1,3,5};
-        result = sol.solution(n,lost,reserve);
-		System.out.println("end" + result);	
-	}
+        int[] lost = {2, 4};
+        int[] reserve = {1, 3, 5};
+        result = sol.solution(n, lost, reserve);
+        System.out.println("end" + result);
+    }
 }
 
 class Solution {

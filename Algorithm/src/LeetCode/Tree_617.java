@@ -31,10 +31,10 @@ package LeetCode;
  */
 public class Tree_617 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		long start = System.currentTimeMillis(); 
-		System.out.println("start");
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        long start = System.currentTimeMillis();
+        System.out.println("start");
 
         Solution2 solution2 = new Solution2();
 
@@ -61,8 +61,8 @@ public class Tree_617 {
         solution2.mergeTrees(treeNode1_root, treeNode2_1_root);
 
         long end = System.currentTimeMillis(); //프로그램이 끝나는 시점 계산
-		System.out.println( "실행 시간 : " + ( end - start ));
-	}
+        System.out.println("실행 시간 : " + (end - start));
+    }
 
 }
 
@@ -70,10 +70,10 @@ public class Tree_617 {
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode(int x) { val = x; }
  * }
  */
 class Solution2 {
@@ -81,17 +81,19 @@ class Solution2 {
         int val;
         TreeNode left;
         TreeNode right;
+
         TreeNode(int x) {
             val = x;
         }
     }
+
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
 
-        if(t1 == null) {
+        if (t1 == null) {
             return t2;
         }
-        if(t2 == null) {
-            return  t1;
+        if (t2 == null) {
+            return t1;
         }
 
         t1.val += t2.val;

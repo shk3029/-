@@ -27,31 +27,31 @@ import java.util.List;
 		입출력 예
 		array	commands	return
 		[1, 5, 2, 6, 3, 7, 4]	[[2, 5, 3], [4, 4, 1], [1, 7, 3]]	[5, 6, 3]
- */ 
+ */
 public class Sort_1 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("start");
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("start");
         int[] array = {1, 5, 2, 6, 3, 7, 4};
-        int[][] commands = {{2,5,3},{4, 4, 1},{1,7,3}};
-		int[] result = solution(array, commands);
-		System.out.println(result);
-	}
-	
-	public static int[] solution(int[] array, int[][] commands) {
-	    int[] answer = {};
+        int[][] commands = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+        int[] result = solution(array, commands);
+        System.out.println(result);
+    }
+
+    public static int[] solution(int[] array, int[][] commands) {
+        int[] answer = {};
         List<Integer> retList = new ArrayList<>();
         int a = commands.length;
 
-        for(int i=0; i<commands.length; i++) {
+        for (int i = 0; i < commands.length; i++) {
             int startNum = commands[i][0];
             int endNum = commands[i][1];
             int wantNum = commands[i][2];
 
             List<Integer> tempList = new ArrayList<>();
-            for(int j=0; j<array.length; j++) {
-                if(j >= startNum-1 && j <= endNum-1) {
+            for (int j = 0; j < array.length; j++) {
+                if (j >= startNum - 1 && j <= endNum - 1) {
                     tempList.add(array[j]);
                 }
             }
@@ -59,18 +59,18 @@ public class Sort_1 {
             Collections.sort(tempList);
 
             int[] ret = new int[tempList.size()];
-            for (int k=0; k < ret.length; k++) {
+            for (int k = 0; k < ret.length; k++) {
                 ret[k] = tempList.get(k).intValue();
             }
-            System.out.println(ret[wantNum-1]);
-            retList.add(ret[wantNum-1]);
+            System.out.println(ret[wantNum - 1]);
+            retList.add(ret[wantNum - 1]);
         }
 
-            int[] tmp = new int[retList.size()];
-            for (int k=0; k < tmp.length; k++) {
-                tmp[k] = retList.get(k).intValue();
-            }
-            answer = tmp;
+        int[] tmp = new int[retList.size()];
+        for (int k = 0; k < tmp.length; k++) {
+            tmp[k] = retList.get(k).intValue();
+        }
+        answer = tmp;
         return answer;
     }
 
@@ -78,10 +78,10 @@ public class Sort_1 {
     public static int[] solution2(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
 
-        for(int i= 0; i<commands.length ; i++){
-            int start = commands[i][0] == 0 ? 0 : commands[i][0]-1;
-            int finish = commands[i][1] == commands[i][0] ? start+1 : commands[i][1] ;
-            int pos = commands[i][2]-1;
+        for (int i = 0; i < commands.length; i++) {
+            int start = commands[i][0] == 0 ? 0 : commands[i][0] - 1;
+            int finish = commands[i][1] == commands[i][0] ? start + 1 : commands[i][1];
+            int pos = commands[i][2] - 1;
 
             int[] tmp = Arrays.copyOfRange(array, start, finish);
 
