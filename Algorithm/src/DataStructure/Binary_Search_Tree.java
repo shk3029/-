@@ -10,4 +10,43 @@ package DataStructure;
      O(log n)의 시간복잡도르 가짐 - 정확히는 O(h)라고 표현하는 것이 맞음
  */
 public class Binary_Search_Tree {
+    Node rootNoe = new Node(10);
+
+
+}
+
+class Node {
+    private int data;
+    private Node left;
+    private Node right;
+
+    public Node(int data) {
+        this.data = data;
+        setLeft(null);
+        setRight(null);
+    }
+
+    public int getData() {
+        return data;
+    }
+
+    public void setData(int data) {
+        this.data = data;
+    }
+
+    public Node getLeft() {
+        return left;
+    }
+
+    public void setLeft(Node left) {
+        this.left = left;
+    }
+
+    public Node getRight() {
+        return right;
+    }
+
+    public void setRight(Node right) {
+        this.right = right;
+    }
 }
