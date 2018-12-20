@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 /*
-강의
 최대공약수와 최소공배수
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
 1 초	128 MB	13095	8422	7019	67.065%
