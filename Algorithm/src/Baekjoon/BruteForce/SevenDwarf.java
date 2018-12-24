@@ -49,7 +49,6 @@ public class SevenDwarf {
         for(int i=0; i<dwarfTalls.length; i++) {
             dwarfTalls[i] = s.nextInt();
         }
-
         SevenDwarf sevenDwarf = new SevenDwarf();
         sevenDwarf.solution(dwarfTalls);
     }
