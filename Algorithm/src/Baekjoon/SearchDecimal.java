@@ -24,6 +24,9 @@ import java.util.Scanner;
 
 예제 출력 1
 3
+
+-- ** 에라토스테네스의 체 **
+
  */
 public class SearchDecimal {
     Scanner scanner = new Scanner(System.in);

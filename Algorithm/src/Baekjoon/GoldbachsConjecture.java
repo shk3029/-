@@ -46,6 +46,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class GoldbachsConjecture {
+    Boolean[] isDecimalValue = new Boolean[100001];
     Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         GoldbachsConjecture goldbachsConjecture = new GoldbachsConjecture();
@@ -53,6 +54,7 @@ public class GoldbachsConjecture {
     }
     public void solution()  {
         try {
+            long beforeTime = System.currentTimeMillis();
             List<Integer> nums = new ArrayList<>();
             while(true) {
                 if(nums.size() == 100000) break; // 1. (input.length <= 100,000)
@@ -62,6 +64,11 @@ public class GoldbachsConjecture {
             }
             Integer[] numsInt = nums.toArray(new Integer[nums.size()]);
             getGoldbachsConjecture(numsInt); // 입력한 n들을 넘겨서 각각 n = a + b로 출력 (b-a가 가장 큰것)
+            long aftertime = System.currentTimeMillis();
+
+            long secDiffTime = (aftertime - beforeTime)/1000; //두 시간에 차 계산
+            System.out.println("시간차이(m) : "+secDiffTime);
+
         } catch (Exception e) {
             System.out.println("Error >>" + e.getMessage());
         }
@@ -72,15 +79,18 @@ public class GoldbachsConjecture {
         for(int n : nums) {
             int a = 0, b = 0;
             // 3 ~ 각 숫자까지 홀수이면서 소수인수를 파악해서
+            for(int i=3; i<=n; i++) {
+                isDecimalValue[i] = isOddAndDerciaml(i);
+            }
             for(int i=3; i<=n/2+1; i++) {
-                if(!isOddAndDerciaml(i) || !isOddAndDerciaml(n-i)) continue;
-                if(isOddAndDerciaml(i) && isOddAndDerciaml(n-i)) {
+                if(!isDecimalValue[i] || !isDecimalValue[n-i]) continue;
+                if(isDecimalValue[i] && isDecimalValue[n-i]) {
                     a = i;
                     b = n-i;
                     System.out.println(n +" = " + a + " + " + b );
                     break;  // 초반이 b-a가 가장 큼
                 }
-                if(i==n) {
+                if(a == 0 && b == 0) {
                     System.out.println("Goldbach's conjecture is wrong");
                 }
             }

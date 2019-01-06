@@ -1,9 +1,7 @@
+package LeetCode;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import sun.rmi.runtime.Log;
 
 /*
 771. Jewels and Stones

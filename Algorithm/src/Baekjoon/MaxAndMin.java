@@ -24,6 +24,8 @@ import java.util.Scanner;
 6
 72
 
+-- ** 유클리드 호제법으로 풀어보기 **
+
  */
 public class MaxAndMin {
     public static void main(String[] args) {
