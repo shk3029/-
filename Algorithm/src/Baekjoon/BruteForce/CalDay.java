@@ -1,4 +1,7 @@
 package Baekjoon.BruteForce;
+
+import java.util.Scanner;
+
 /*
 1476 날짜 계산
 시간 제한	메모리 제한	제출	정답	맞은 사람	정답 비율
@@ -21,6 +24,11 @@ E, S, M이 주어졌고, 1년이 준규가 사는 나라에서 1 1 1일때, 준�
 1 16 16
 예제 출력 1
 16
+
+15 나눴을 때, 나머지 0이면 15
+28 나눴을 때, 나머지 0이면 28
+19 나눴을 때, 나머지 0이면 19
+
 예제 입력 2
 1 1 1
 예제 출력 2
@@ -36,4 +44,40 @@ E, S, M이 주어졌고, 1년이 준규가 사는 나라에서 1 1 1일때, 준�
  */
 public class CalDay {
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        CalDay calDay = new CalDay();
+        System.out.println(calDay.logic(a,b,c));
+    }
+
+    public int logic(int a, int b, int c) {
+
+        //15, 28, 19
+        return 0;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
