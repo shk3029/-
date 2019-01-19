@@ -27,18 +27,18 @@ import java.util.Map;
 public class LinkedList_876 {
 
     public static void main(String[] args) {
-        Solution1 solution1 = new Solution1();
-        Solution1.ListNode listNode1 = new Solution1.ListNode(1);
-        Solution1.ListNode listNode2 = new Solution1.ListNode(2);
-        Solution1.ListNode listNode3 = new Solution1.ListNode(3);
-        Solution1.ListNode listNode4 = new Solution1.ListNode(4);
-        Solution1.ListNode listNode5 = new Solution1.ListNode(5);
+        Solution12 solution1 = new Solution12();
+        Solution12.ListNode listNode1 = new Solution12.ListNode(1);
+        Solution12.ListNode listNode2 = new Solution12.ListNode(2);
+        Solution12.ListNode listNode3 = new Solution12.ListNode(3);
+        Solution12.ListNode listNode4 = new Solution12.ListNode(4);
+        Solution12.ListNode listNode5 = new Solution12.ListNode(5);
         listNode1.next = listNode2;
         listNode2.next = listNode3;
         listNode3.next = listNode4;
         listNode4.next = listNode5;
 
-        Solution1.ListNode result = solution1.middleNode(listNode1);
+        Solution12.ListNode result = solution1.middleNode(listNode1);
 
         while (result != null) {
             System.out.println(result.val);
@@ -58,7 +58,7 @@ public class LinkedList_876 {
  * }
  */
 
-class Solution1 {
+class Solution12 {
     public static class ListNode {
         int val;
         ListNode next;
